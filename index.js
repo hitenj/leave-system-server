@@ -15,6 +15,10 @@ app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/leaves', require('./routes/leaveRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 
+app.get('/', (req, res) => {
+  res.send('Leave Management API is running ✅');
+});
+
 
 // Server
 const PORT = process.env.PORT || 5000;
